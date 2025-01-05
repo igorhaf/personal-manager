@@ -1,7 +1,7 @@
-# Base image para Java
+# Base image para Java com suporte ao Maven
 FROM mcr.microsoft.com/devcontainers/java:17
 
-# Instalar Zsh, curl, git e dependências
+# Instalar Zsh, curl, git e dependências necessárias para Oh My Zsh
 RUN apt-get update && apt-get install -y \
     zsh \
     curl \
@@ -15,12 +15,3 @@ RUN sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master
 
 # Configurar Zsh como shell padrão
 RUN chsh -s $(which zsh)
-
-# Configurar histórico do Zsh para ser persistente no repositório
-RUN mkdir -p /workspace/.zsh_history && \
-    echo "HISTFILE=/workspace/.zsh_history/zsh_history" >> ~/.zshrc && \
-    echo "HISTSIZE=10000" >> ~/.zshrc && \
-    echo "SAVEHIST=10000" >> ~/.zshrc && \
-    echo "setopt appendhistory" >> ~/.zshrc && \
-    echo "setopt inc_append_history" >> ~/.zshrc && \
-    echo "setopt share_history" >> ~/.zshrc

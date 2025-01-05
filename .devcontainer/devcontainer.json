@@ -9,7 +9,7 @@
   "customizations": {
     "vscode": {
       "extensions": [
-        "vscjava.vscode-java-pack",
+        "vscjava.vscode-java-pack", 
         "vscjava.vscode-spring-boot",
         "eamodio.gitlens",
         "pivotal.vscode-spring-boot",
@@ -23,7 +23,7 @@
       }
     }
   },
-  "postCreateCommand": "mvn clean install",
+  "postCreateCommand": "ln -sf $PWD/.zshrc ~/.zshrc && ln -sf $PWD/.zsh_history ~/.zsh_history && echo 'Zsh configurado com histórico persistente!'",
   "portsAttributes": {
     "8080": {
       "label": "Application Port",
