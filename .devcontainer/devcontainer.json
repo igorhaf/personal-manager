@@ -1,0 +1,23 @@
+{
+    "name": "Java Spring Boot Development",
+    "image": "mcr.microsoft.com/devcontainers/java:17",
+    "customizations": {
+      "vscode": {
+        "extensions": [
+          "vscjava.vscode-java-pack", // Extension Pack for Java
+          "vscjava.vscode-spring-boot", // Spring Boot Extension Pack
+          "eamodio.gitlens", // GitLens — Git supercharged
+          "GitHub.copilot", // GitHub Copilot
+          "GitHub.copilot-chat", // GitHub Copilot Chat
+          "yzhang.markdown-all-in-one" // Markdown All in One
+        ]
+      }
+    },
+    "features": {
+      "ghcr.io/devcontainers/features/maven:1": {
+        "version": "3.8.5"
+      }
+    },
+    "postCreateCommand": "echo 'Development environment is ready!'"
+  }
+  
