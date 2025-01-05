@@ -28,6 +28,10 @@
     "8080": {
       "label": "Application Port",
       "onAutoForward": "notify"
+    },
+    "9090": {
+      "label": "Management Port",
+      "onAutoForward": "notify"
     }
   }
 }
