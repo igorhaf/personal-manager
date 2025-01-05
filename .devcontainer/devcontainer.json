@@ -1,6 +1,11 @@
-{
-    "name": "Java Spring Boot Development",
+  {
+    "name": "Personal Manager Dev Environment",
     "image": "mcr.microsoft.com/devcontainers/java:17",
+    "features": {
+      "ghcr.io/devcontainers/features/maven:1": {
+        "version": "3.8.5"
+      }
+    },
     "customizations": {
       "vscode": {
         "extensions": [
@@ -10,14 +15,16 @@
           "GitHub.copilot", // GitHub Copilot
           "GitHub.copilot-chat", // GitHub Copilot Chat
           "yzhang.markdown-all-in-one" // Markdown All in One
+          "redhat.java"
         ]
       }
     },
-    "features": {
-      "ghcr.io/devcontainers/features/maven:1": {
-        "version": "3.8.5"
+    "postCreateCommand": "mvn clean install",
+    "portsAttributes": {
+      "8080": {
+        "label": "Application Port",
+        "onAutoForward": "notify"
       }
-    },
-    "postCreateCommand": "echo 'Development environment is ready!'"
+    }
   }
   
