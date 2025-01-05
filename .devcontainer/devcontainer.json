@@ -1,29 +1,33 @@
-  {
-    "name": "Personal Manager Dev Environment",
-    "image": "mcr.microsoft.com/devcontainers/java:17",
-    "features": {
-      "ghcr.io/devcontainers/features/docker-in-docker:1": {}
-    },
-    "customizations": {
-      "vscode": {
-        "extensions": [
-          "vscjava.vscode-java-pack", // Extension Pack for Java
-          "vscjava.vscode-spring-boot", // Spring Boot Extension Pack
-          "eamodio.gitlens", // GitLens — Git supercharged
-          "pivotal.vscode-spring-boot",
-          "GitHub.copilot", // GitHub Copilot
-          "GitHub.copilot-chat", // GitHub Copilot Chat
-          "yzhang.markdown-all-in-one", // Markdown All in One
-          "redhat.java"
-        ]
-      }
-    },
-    "postCreateCommand": "mvn clean install",
-    "portsAttributes": {
-      "8080": {
-        "label": "Application Port",
-        "onAutoForward": "notify"
+{
+  "name": "Personal Manager Dev Environment",
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
+  "features": {
+    "ghcr.io/devcontainers/features/docker-in-docker:1": {}
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "vscjava.vscode-java-pack",
+        "vscjava.vscode-spring-boot",
+        "eamodio.gitlens",
+        "pivotal.vscode-spring-boot",
+        "GitHub.copilot",
+        "GitHub.copilot-chat",
+        "yzhang.markdown-all-in-one",
+        "redhat.java"
+      ],
+      "settings": {
+        "terminal.integrated.defaultProfile.linux": "zsh"
       }
     }
+  },
+  "postCreateCommand": "mvn clean install",
+  "portsAttributes": {
+    "8080": {
+      "label": "Application Port",
+      "onAutoForward": "notify"
+    }
   }
-  
+}
