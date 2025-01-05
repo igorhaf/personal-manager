@@ -23,7 +23,7 @@
       }
     }
   },
-  "postCreateCommand": "ln -sf $PWD/.zshrc ~/.zshrc && ln -sf $PWD/.zsh_history ~/.zsh_history && echo 'Zsh configurado com histórico persistente!'",
+  "postCreateCommand": "ln -sf $PWD/.zshrc ~/.zshrc && ln -sf $PWD/.zsh_history ~/.zsh_history && echo 'Zsh configurado com histórico persistente!' && mvn clean install && mvn spring-boot:run",
   "portsAttributes": {
     "8080": {
       "label": "Application Port",
