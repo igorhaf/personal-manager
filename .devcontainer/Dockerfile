@@ -1,5 +1,5 @@
 # Base image para Java com suporte ao Maven
-FROM mcr.microsoft.com/devcontainers/java:17-maven
+FROM mcr.microsoft.com/devcontainers/java:17
 
 # Instalar Zsh, curl, git e dependências necessárias
 RUN apt-get update && apt-get install -y \
