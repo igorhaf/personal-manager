@@ -9,7 +9,7 @@
   "customizations": {
     "vscode": {
       "extensions": [
-        "vscjava.vscode-java-pack", 
+        "vscjava.vscode-java-pack",
         "vscjava.vscode-spring-boot",
         "eamodio.gitlens",
         "pivotal.vscode-spring-boot",
@@ -23,7 +23,7 @@
       }
     }
   },
-  "postCreateCommand": "ln -sf $PWD/.zshrc ~/.zshrc && ln -sf $PWD/.zsh_history ~/.zsh_history && echo 'Zsh configurado com histórico persistente!' && mvn clean install && mvn spring-boot:run",
+  "postCreateCommand": "ln -sf $PWD/.zshrc ~/.zshrc && ln -sf $PWD/.zsh_history ~/.zsh_history && git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions && git clone https://github.com/zsh-users/zsh-history-substring-search ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-history-substring-search && echo 'plugins=(git zsh-autosuggestions zsh-history-substring-search)' >> ~/.zshrc && echo 'source $ZSH/oh-my-zsh.sh' >> ~/.zshrc && echo 'bindkey \"^[[A\" history-substring-search-up' >> ~/.zshrc && echo 'bindkey \"^[[B\" history-substring-search-down' >> ~/.zshrc && source ~/.zshrc && echo 'Zsh configurado com histórico persistente!' && mvn clean install && mvn spring-boot:run",
   "portsAttributes": {
     "8080": {
       "label": "Application Port",
