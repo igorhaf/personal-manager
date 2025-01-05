@@ -16,3 +16,7 @@ ZSH=~/.oh-my-zsh
 ZSH_THEME="robbyrussell"
 plugins=(git zsh-autosuggestions zsh-history-substring-search)
 source $ZSH/oh-my-zsh.sh
+plugins=(git zsh-autosuggestions zsh-history-substring-search)
+source $ZSH/oh-my-zsh.sh
+bindkey "^[[A" history-substring-search-up
+bindkey "^[[B" history-substring-search-down
