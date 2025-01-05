@@ -2,9 +2,7 @@
     "name": "Personal Manager Dev Environment",
     "image": "mcr.microsoft.com/devcontainers/java:17",
     "features": {
-      "ghcr.io/devcontainers/features/maven:1": {
-        "version": "3.8.5"
-      }
+      "ghcr.io/devcontainers/features/docker-in-docker:1": {}
     },
     "customizations": {
       "vscode": {
@@ -12,6 +10,7 @@
           "vscjava.vscode-java-pack", // Extension Pack for Java
           "vscjava.vscode-spring-boot", // Spring Boot Extension Pack
           "eamodio.gitlens", // GitLens — Git supercharged
+          "pivotal.vscode-spring-boot",
           "GitHub.copilot", // GitHub Copilot
           "GitHub.copilot-chat", // GitHub Copilot Chat
           "yzhang.markdown-all-in-one", // Markdown All in One
