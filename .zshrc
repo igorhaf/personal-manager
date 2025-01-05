@@ -14,5 +14,5 @@ alias ll='ls -la'
 # Configurações do Oh My Zsh
 ZSH=~/.oh-my-zsh
 ZSH_THEME="robbyrussell"
-plugins=(git)
+plugins=(git zsh-autosuggestions zsh-history-substring-search)
 source $ZSH/oh-my-zsh.sh
