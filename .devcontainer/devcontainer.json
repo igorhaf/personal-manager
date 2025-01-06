@@ -24,13 +24,11 @@
     }
   },
   "postCreateCommand": "ln -sf $PWD/.zshrc ~/.zshrc && ln -sf $PWD/.zsh_history ~/.zsh_history && git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions && git clone https://github.com/zsh-users/zsh-history-substring-search ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-history-substring-search && echo 'plugins=(git zsh-autosuggestions zsh-history-substring-search)' >> ~/.zshrc && echo 'source $ZSH/oh-my-zsh.sh' >> ~/.zshrc && echo 'bindkey \"^[[A\" history-substring-search-up' >> ~/.zshrc && echo 'bindkey \"^[[B\" history-substring-search-down' >> ~/.zshrc && source ~/.zshrc && echo 'Zsh configurado com histórico persistente!' && ./mvnw clean install && ./mvnw spring-boot:run",
+  "forwardPorts": [8080],
+  "appPort": [8080],
   "portsAttributes": {
     "8080": {
       "label": "Application Port",
-      "onAutoForward": "notify"
-    },
-    "9090": {
-      "label": "Management Port",
       "onAutoForward": "notify"
     }
   }
